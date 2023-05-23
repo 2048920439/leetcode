@@ -1,3 +1,5 @@
+
+// 动态规划解法
 export function climbStairs1(n: number): number {
     let p: number = 0, q: number = 0, r: number = 1;
     for (let i = 1; i <= n; ++i) {
@@ -7,13 +9,14 @@ export function climbStairs1(n: number): number {
     }
     return r;
 }
-
+// 求通项公式
 export function climbStairs2(n: number): number {
     const sqrt5: number = Math.sqrt(5);
     const fibn: number = Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1);
     return Math.round(fibn / sqrt5);
 }
 
+// 矩阵快速幂求解
 export function climbStairs3(n: number): number {
     const q = [[1, 1], [1, 0]];
     const res = pow(q, n);
@@ -41,6 +44,3 @@ export function climbStairs3(n: number): number {
         return ret;
     }
 }
-
-
-
