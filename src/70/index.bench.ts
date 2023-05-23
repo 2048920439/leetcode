@@ -1,14 +1,17 @@
-
-import {climbStairs, climbStairs1} from './index';
+import {climbStairs1, climbStairs2, climbStairs3} from './index';
 import {bench, describe} from 'vitest';
 
 describe('climbStairs', function () {
-    bench('climbStairs performance test', function () {
-        climbStairs(30);
+    const n = 1000
+    bench('climbStairs1', function () {
+        climbStairs1(n);
     })
-});
-describe('climbStairs1', function () {
-    bench('climbStairs performance1 test', function () {
-        climbStairs1(30);
+    bench('climbStairs2', function () {
+        climbStairs2(n);
     })
+    bench('climbStairs3', function () {
+        climbStairs3(n);
+    })
+
 });
+
