@@ -6,7 +6,7 @@ describe('prefixesDivBy5', function () {
         .fill(undefined)
         .map(() => Math.random() > .5 ? 1 : 0)
 
-    bench('should return the correct array of boolean values', function () {
+    bench.skip('should return the correct array of boolean values', function () {
         prefixesDivBy5(arr)
     })
 });
